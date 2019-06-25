@@ -31,7 +31,7 @@ $("#add-user").on("click", function (event) {
   var roleInput = $("#role-input").val().trim();
   var startdateInput = $("#startdate-input").val().trim();
   var monthlyInput = $("#monthly-input").val().trim();
-  console.log(nameInput, roleInput, startdateInput, monthlyInput);
+
 
   // Creates local "temporary" object for holding employee data
   var employeeData = {
@@ -48,15 +48,24 @@ $("#add-user").on("click", function (event) {
     startDate: startdateInput,
     monthlyInput: monthlyInput
   })
+
+  // Logs everything to console
+  console.log(employeeData);
+
+  // Clears all of the text-boxes
+  $("#name-input").text("");
+  $("#role-input").text("");
+  $("#startdate-input").text("");
+  $("#monthly-input").text("")
 });
 
 
 
 
 
-// Logs everything to console
 
-// Clears all of the text-boxes
+
+
 
 // 3. Create Firebase event for adding employee to the database and a row in the html when a user adds an entry
 database.ref().on('child_added', function (childSnapshot) {
