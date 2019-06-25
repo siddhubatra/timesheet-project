@@ -25,6 +25,8 @@ var database = firebase.database();
 // 2. Button for adding Employees
 
 // Grabs user input
+var userInput = $("#add-user").val();
+console.log(userInput);
 
 // Creates local "temporary" object for holding employee data
 
