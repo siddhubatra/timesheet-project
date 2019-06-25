@@ -25,12 +25,35 @@ var database = firebase.database();
 // 2. Button for adding Employees
 
 // Grabs user input
-var userInput = $("#add-user").val();
-console.log(userInput);
+$("#add-user").on("click", function (event) {
+  event.preventDefault();
+  var nameInput = $("#name-input").val().trim();
+  var roleInput = $("#role-input").val().trim();
+  var startdateInput = $("#startdate-input").val().trim();
+  var monthlyInput = $("#monthly-input").val().trim();
+  console.log(nameInput, roleInput, startdateInput, monthlyInput);
 
-// Creates local "temporary" object for holding employee data
+  // Creates local "temporary" object for holding employee data
+  var employeeData = {
+    name: nameInput,
+    role: roleInput,
+    startDate: startdateInput,
+    monthlyInput: monthlyInput
+  };
 
-// Uploads employee data to the database
+  // Uploads employee data to the database
+  database.ref().push({
+    name: nameInput,
+    role: roleInput,
+    startDate: startdateInput,
+    monthlyInput: monthlyInput
+  })
+
+});
+
+
+
+
 
 // Logs everything to console
 
