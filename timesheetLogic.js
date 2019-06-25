@@ -48,7 +48,6 @@ $("#add-user").on("click", function (event) {
     startDate: startdateInput,
     monthlyInput: monthlyInput
   })
-
 });
 
 
