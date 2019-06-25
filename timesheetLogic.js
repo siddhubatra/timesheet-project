@@ -9,13 +9,13 @@
 
 // 1. Initialize Firebase
 var config = {
-  apiKey: 'AIzaSyCyVeCWkvNafYXcVl4lR-siH5ET4OIPY14',
-  authDomain: 'timesheetlogicta.firebaseapp.com',
-  databaseURL: 'https://timesheetlogicta.firebaseio.com',
-  projectId: 'timesheetlogicta',
-  storageBucket: '',
-  messagingSenderId: '913276287419',
-  appId: '1:913276287419:web:2270c82ed0803630'
+  apiKey: "AIzaSyByHpczBtL7eLRwRzbk9gDo8Q-0XJfl3Zc",
+  authDomain: "timesheet-jts.firebaseapp.com",
+  databaseURL: "https://timesheet-jts.firebaseio.com",
+  projectId: "timesheet-jts",
+  storageBucket: "",
+  messagingSenderId: "795615912590",
+  appId: "1:795615912590:web:6675a44c437f5ddb"
 };
 
 firebase.initializeApp(config);
